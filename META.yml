@@ -1,0 +1,25 @@
+---
+abstract: 'Dancer plugin for using XML::RSS to parse or create RSS feeds'
+author:
+  - 'Lee Carmichael <lcarmich@cpan.org>'
+build_requires:
+  Test::More: 0
+  strict: 0
+  warnings: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300038, CPAN::Meta::Converter version 2.132510'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Dancer-Plugin-XML-RSS
+requires:
+  Dancer: 0
+  Dancer::Plugin: 0
+  XML::RSS: 0
+resources:
+  bugtracker: https://github.com/lecar-red/Dancer-Plugin-XML-RSS/issues
+  repository: git://github.com/lecar-red/Dancer-Plugin-XML-RSS.git
+version: 0.02_01

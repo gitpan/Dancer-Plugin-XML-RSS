@@ -1,9 +1,15 @@
 Changes
-lib/Dancer/Plugin/XML/RSS.pm
+LICENSE
+MANIFEST
+META.yml
 Makefile.PL
-MANIFEST			This list of files
 README
+README.install
+README.mkdn
+dist.ini
+ignore.txt
+lib/Dancer/Plugin/XML/RSS.pm
 t/00-load.t
 t/manifest.t
-t/pod-coverage.t
-t/pod.t
+t/release-pod-coverage.t
+t/release-pod-syntax.t

@@ -1,11 +1,15 @@
 package Dancer::Plugin::XML::RSS;
+{
+  $Dancer::Plugin::XML::RSS::VERSION = '0.02_01';
+}
+{
+  $Dancer::Plugin::XML::RSS::DIST = 'Dancer-Plugin-XML-RSS';
+}
 
 use Dancer ':syntax';
 use Dancer::Plugin;
 
 use XML::RSS;
-
-our $VERSION = '0.01';
 
 register 'rss' => sub {
     my $option   = shift; # 'new' force creation of new obj
@@ -29,15 +33,21 @@ register 'rss_output' => sub {
 
 register_plugin;
 
+1;
+
+# ABSTRACT: Dancer plugin for using XML::RSS to parse or create RSS feeds
+
+__END__
+
+=pod
+
 =head1 NAME
 
 Dancer::Plugin::XML::RSS - Dancer plugin for using XML::RSS to parse or create RSS feeds
 
 =head1 VERSION
 
-Version 0.01
-
-=cut
+version 0.02_01
 
 =head1 SYNOPSIS
 
@@ -98,7 +108,6 @@ XML:RSS configuration parameters will be taken from your C<Dancer> application c
 
 See C<XML::RSS> for more detail on configuration options.
 
-
 =head1 SUBROUTINES/METHODS
 
 =head2 rss('new')
@@ -108,13 +117,11 @@ Creates and returns XML::RSS object. It will be setup with any XML::RSS options 
 After first call to rss existing XML::RSS object will be called to force a new object pass 
 'new' to C<rss>
 
-=over 
+=over
 
 =item 'new' - optional string to force creation of new rss object
 
 =back
-
-=cut
 
 =head2 rss_output
 
@@ -136,24 +143,13 @@ You can find documentation for this module with the perldoc command.
 
     perldoc Dancer::Plugin::XML::RSS
 
-
 You can also look for information at:
 
 =over 4
 
-=item * RT: CPAN's request tracker (report bugs here)
+=item * Github's Bug Tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dancer-Plugin-XML-RSS>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Dancer-Plugin-XML-RSS>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Dancer-Plugin-XML-RSS>
-
-=item * Search CPAN
+L<http://metacpan.org/dist/Dancer-Plugin-XML-RSS/>
 
 L<http://search.cpan.org/dist/Dancer-Plugin-XML-RSS/>
 
@@ -169,20 +165,15 @@ L<http://search.cpan.org/dist/Dancer-Plugin-XML-RSS/>
 
 =back
 
-=head1 LICENSE AND COPYRIGHT
+=head1 AUTHOR
 
-Copyright 2011 Lee Carmichael.
+Lee Carmichael <lcarmich@cpan.org>
 
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation; or the Artistic License.
+=head1 COPYRIGHT AND LICENSE
 
-See http://dev.perl.org/licenses/ for more information.
+This software is copyright (c) 2013 by Lee Carmichael.
 
-=head1 SEE ALSO
-
-C<Dancer>, C<XML::RSS>, C<Dancer::Plugin>, C<Dancer::Plugin::Feed>
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-1; # End of Dancer::Plugin::XML::RSS
